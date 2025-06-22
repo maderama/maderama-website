@@ -116,7 +116,7 @@ function App() {
       icon="💖"
       message="You made this?? You should tell that recruiter lady! 💼😘"
       avatarUrl="/mum.png"
-      time="just now"
+      time="16m ago"
     />
   ), { duration: Infinity })
 
@@ -125,7 +125,7 @@ function App() {
       title="Github"
       message="All green. We’re not sure how, but we’re not asking questions."
       iconUrl="/github_logo.png"
-      time="just now"
+      time="4m ago"
     />
   ), { duration: Infinity })
 

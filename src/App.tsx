@@ -3,9 +3,9 @@ import { GlobalStyles } from "./__styles__/GlobalStyles"
 import { WaveTextRipple } from "./components/WaveTextRipple"
 import { toast } from "sonner"
 import styled from "styled-components";
-import IOSMessageToast from "./components/IOSMessageToast";
-import SystemStyleToast from "./components/SystemStyleToast";
-import { StickyNote } from "./components/StickyNote";
+import IOSMessageToast from "./components/Messages/IOSMessage";
+import SystemStyleToast from "./components/Messages/SystemMessage";
+import { StickyNote } from "./components/StickyNote/StickyNote";
 
 function App() {
   useEffect(() => {
@@ -38,13 +38,11 @@ function App() {
   ), { duration: Infinity })
   }, [])
 
-  const DesktopContainer = styled.div`
-    width: 600px;
-    height: 300px;
-    position: relative;
-    background: #fefefe;
-    overflow: hidden;
-  `;
+const DesktopContainer = styled.div`
+  position: relative;
+  width: 18.75rem;
+  height: 12.5rem;
+`;
 
   return (
     <>

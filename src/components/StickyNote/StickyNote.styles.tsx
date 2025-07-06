@@ -6,11 +6,11 @@ export const Note = styled.div`
   font-weight: 500;
   line-height: 1.4;
   background: #fff9b0;
-  border-radius: 18px;
-  padding: 12px 16px;
+  border-radius: 1px;
+  padding: 16px 16px;
   box-sizing: border-box;
   width: 18.75rem;
-  height: 12.5rem;
+  height: 11rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   text-align: left;
   white-space: normal;
@@ -26,4 +26,15 @@ export const Note = styled.div`
     font-weight: 600;
     font-size: 0.8rem;
   }
+
+  &::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px; // adjust to your liking
+  width: 100%;
+  background: #f7d900;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
 `;

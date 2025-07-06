@@ -1,8 +1,9 @@
-// src/components/Toasts.jsx
 import { useEffect } from "react";
 import { toast } from "sonner";
 import IOSMessageToast from "./IOSMessage";
 import SystemStyleToast from "./SystemMessage";
+import githubLogo from "../../../assets/images/github_logo.png";
+import slackIcon from "../../../assets/images/slack_icon.png";
 
 function Toasts() {
   useEffect(() => {
@@ -20,7 +21,7 @@ function Toasts() {
       <SystemStyleToast
         title="Github"
         message="All green. We’re not sure how, but we’re not asking questions."
-        iconUrl="/github_logo.png"
+        iconUrl={githubLogo}
         time="4m ago"
       />
     ), { duration: Infinity });
@@ -29,7 +30,7 @@ function Toasts() {
       <SystemStyleToast
         title="Boss"
         message="You're on fire today 🔥🔥 Thanks for pushing that out so fast!"
-        iconUrl="/slack_icon.png"
+        iconUrl={slackIcon}
         time="just now"
       />
     ), { duration: Infinity });

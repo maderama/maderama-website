@@ -1,10 +1,11 @@
 import { styled } from "styled-components";
 import { GlobalStyles } from "./__styles__/GlobalStyles";
 import { StickyNote } from "./components/StickyNote/StickyNote";
-import { WaveTextRipple } from "./components/WaveTextRipple";
 import MessageToasts from "./components/Messages/MessageToasts";
 import { StickyNoteContainer } from "./components/StickyNote/StickyNoteContainer.styles";
 import MacDock from "./components/Dock/MacDock";
+import ThiccText from "./components/Text/ThiccText";
+import { TextContainer } from "./components/Text/TextContainer";
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
       <StickyNoteContainer id="desktop-container">
         <StickyNote />
       </StickyNoteContainer>
-      <h1>welcome to my</h1>
-      <WaveTextRipple text="portfolio." />
+      <TextContainer>
+        <h1>welcome to my</h1>
+        <ThiccText text="portfolio." />
+      </TextContainer>
       <MacDock />
     </>
   );

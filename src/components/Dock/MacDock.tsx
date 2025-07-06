@@ -13,7 +13,7 @@ const DockContainer = styled.div`
   padding: 0.5rem 1.25rem;
 
   border-radius: 1rem; /* 16px */
-  background: rgba(157, 157, 157, 0.5);
+  background: rgba(157, 157, 157, 0.4);
   backdrop-filter: blur(0.75rem) saturate(180%); /* 12px */
   -webkit-backdrop-filter: blur(0.75rem) saturate(180%);
   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.25); /* 12px 24px */
@@ -58,13 +58,14 @@ const AppWrapper = styled.div`
 
 const apps = [
   { name: "Finder", icon: "/icons/finder.png" },
-  { name: "Chrome", icon: "/icons/google_chrome.png" },
+  { name: "Chrome", icon: "/icons/google_chrome.png", active: true },
   { name: "Notes", icon: "/icons/notes.png" },
   { name: "Contacts", icon: "/icons/contacts.png" },
   { name: "Warp", icon: "/icons/warp.png", active: true },
   { name: "VSCode", icon: "/icons/visual_studio_code.png", active: true },
   { name: "Intellij", icon: "/icons/intellij_idea.png" },
   { name: "Bruno", icon: "/icons/bruno.png" },
+  { name: "Slack", icon: "/icons/slack.png", active: true },
   { name: "Spotify", icon: "/icons/spotify.png", active: true },
   { name: "Notion", icon: "/icons/notion.png" },
   { name: "Settings", icon: "/icons/settings.png" },
@@ -95,7 +96,6 @@ export default function MacDock() {
         y: "-0.625rem",
         transition: { type: "spring", stiffness: 200, damping: 15 }
         }}
-        whileTap={{ scale: 0.5 }}
         drag={false}
     />
     {app.active && <Dot />}

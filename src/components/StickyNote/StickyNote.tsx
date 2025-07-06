@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { createDraggable } from 'animejs';
 import { Note } from "./StickyNote.styles";
+import { styled } from "styled-components";
 
 export const StickyNote = () => {
   const noteRef = useRef(null);
@@ -9,7 +10,7 @@ export const StickyNote = () => {
     if (noteRef.current) {
       createDraggable(noteRef.current, {
         container: '#desktop-container',
-        releaseEase: 'easeOutElastic(1, .6)',
+        releaseEase: 'easeOutElastic(1, .5)',
         releaseContainerFriction: 0.2,
         releaseMass: 0.5
       });
@@ -29,7 +30,7 @@ export const StickyNote = () => {
       <br />
       test test test test test test
       <br />
-      swag yolo test test
+      swag yolo test test 
     </Note>
   );
 };

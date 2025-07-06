@@ -8,7 +8,9 @@ export const Note = styled.div`
   background: #fff9b0;
   border-radius: 18px;
   padding: 12px 16px;
-  width: 320px;
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 12.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   text-align: left;
   white-space: normal;

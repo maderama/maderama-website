@@ -4,7 +4,7 @@ import { StickyNote } from "./components/StickyNote/StickyNote";
 import { WaveTextRipple } from "./components/WaveTextRipple";
 import MessageToasts from "./components/Messages/MessageToasts";
 import { StickyNoteContainer } from "./components/StickyNote/StickyNoteContainer.styles";
-// import MacDock from "./components/Dock/MacDock";
+import MacDock from "./components/Dock/MacDock";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       </StickyNoteContainer>
       <h1>welcome to my</h1>
       <WaveTextRipple text="portfolio." />
-      {/* <MacDock /> */}
+      <MacDock />
     </>
   );
 }

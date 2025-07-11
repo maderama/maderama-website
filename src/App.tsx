@@ -6,6 +6,7 @@ import { StickyNoteContainer } from "./components/StickyNote/StickyNoteContainer
 import MacDock from "./components/Dock/MacDock";
 import ThiccText from "./components/Text/ThiccText";
 import { TextContainer } from "./components/Text/TextContainer";
+import DesktopFolders from "./components/Folders/folders";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <h1>welcome to my</h1>
         <ThiccText text="portfolio." />
       </TextContainer>
+      <DesktopFolders/>
       <MacDock />
     </>
   );

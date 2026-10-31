@@ -4,6 +4,7 @@ import { FolderWrapper, FolderIcon } from "./DesktopFolders.styles";
 
 type DesktopFoldersProps = {
   setOpenWindows: React.Dispatch<React.SetStateAction<OpenWindowsState>>;
+  onOpenHobbies: () => void;
 };
 
 const folders = [
@@ -39,9 +40,16 @@ const folders = [
     x: "1200px",
     y: "500px",
   },
+  {
+    name: "hobbies",
+    icon: "/icons/folder.png",
+    x: "130px",
+    y: "180px",
+    id: "hobbies",
+  },
 ];
 
-export default function DesktopFolders({ setOpenWindows }: DesktopFoldersProps) {
+export default function DesktopFolders({ setOpenWindows, onOpenHobbies }: DesktopFoldersProps) {
   return (
     <>
       {folders.map((folder, index) => {
@@ -58,6 +66,8 @@ export default function DesktopFolders({ setOpenWindows }: DesktopFoldersProps) 
                     aboutGuts: !isOpen,
                   };
                 })
+            : folder.id === "hobbies"
+            ? onOpenHobbies
             : folder.onClick;
 
         return (

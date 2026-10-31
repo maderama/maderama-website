@@ -48,13 +48,16 @@ export default function DesktopFolders({ setOpenWindows }: DesktopFoldersProps) 
         const handleClick =
           folder.id === "about"
             ? () =>
-                setOpenWindows((prev) => ({
-                  ...prev,
-                  aboutReadMe: true,
-                  aboutPlaylist: true,
-                  aboutIcon: true,
-                  aboutGuts: true,
-                }))
+                setOpenWindows((prev) => {
+                  const isOpen = prev.aboutReadMe;
+                  return {
+                    ...prev,
+                    aboutReadMe: !isOpen,
+                    aboutPlaylist: !isOpen,
+                    aboutIcon: !isOpen,
+                    aboutGuts: !isOpen,
+                  };
+                })
             : folder.onClick;
 
         return (

@@ -1,12 +1,12 @@
 const aboutText = `Hi, I’m Madison 👋
 
-I started out in mechatronics engineering, got very attached to Java, and now spend most of my time wrangling React, TypeScript, and Kotlin (plus the occasional existential crisis). I like writing APIs, mentoring junior devs, and explaining why things are broken — gently, and usually with a diagram.
+I started out in mechatronics engineering, got very attached to Java (un-ironically 😭), and now spend most of my time wrangling React, TypeScript, and Kotlin. I like writing APIs, mentoring junior devs, and explaining why things are broken (because they always, always are).
 
-I like my systems robust, my code readable, and my Monster Energy drinks in bulk (thank you Costco). I’m most at home untangling legacy chaos, streamlining workflows, and trying to make sense of Splunk logs that seem personally offended by clarity.
+I like my systems robust, my code readable, and my Monster Energy drinks in bulk. I’m most at home untangling legacy code, debugging, and making sure the team has a good time while doing it.
 
-Outside of work, I’m probably baking, buying another indoor plant I don’t need, or talking to my cat like he’s a coworker. His name is Guts, and he has opinions.
+Outside of work, I’m probably baking, lying to myself about enjoying running, or talking to my cats!
 
-If something’s worth doing, it’s probably worth over-engineering. Or at least wrapping in a try-catch. 🫠
+I strive to make things better to the best of my ability. Whether that be code, processes, or team culture. 
 `;
 
 export default aboutText;

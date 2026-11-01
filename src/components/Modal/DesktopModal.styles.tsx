@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 export const ReadMeWindow = styled(motion.div)`
   position: absolute;
+  top: 0;
+  left: 0;
   width: 500px;
   height: 380px;
   background: white;
@@ -80,6 +82,8 @@ export const StyledPre = styled.pre`
 
 export const PlaylistWindow = styled(motion.div)`
   position: absolute;
+  top: 0;
+  left: 0;
   width: 300px;
   height: 100px;
   border-radius: 10px;
@@ -93,6 +97,8 @@ export const PlaylistWindow = styled(motion.div)`
 
 export const IconWindow = styled(motion.div)`
   position: absolute;
+  top: 0;
+  left: 0;
   width: 270px;
   height: 300px;
   border-radius: 10px;
@@ -120,6 +126,8 @@ export const StyledIcon = styled.img`
 
 export const GutsWindow = styled(motion.div)`
   position: absolute;
+  top: 0;
+  left: 0;
   width: 250px;
   height: 300px;
   border-radius: 10px;

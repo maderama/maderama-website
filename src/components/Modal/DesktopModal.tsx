@@ -17,7 +17,7 @@ export default function DesktopModal({ openWindows, setOpenWindows }: DesktopMod
   return (
     <>
     {openWindows.aboutReadMe && (
-      <ReadMeWindow drag dragMomentum={false} initial={{ x: 150, y: -250 }}>
+      <ReadMeWindow drag dragMomentum={false} initial={{ x: 260, y: 210 }}>
         <ModalHeader>
           <Dot onClick={() => setOpenWindows(prev => ({ ...prev, aboutReadMe: false }))} />
           <Dot />
@@ -31,7 +31,7 @@ export default function DesktopModal({ openWindows, setOpenWindows }: DesktopMod
     )}
 
     {openWindows.aboutPlaylist && (
-      <PlaylistWindow drag dragMomentum={false} initial={{ x: 575, y: 50 }}>
+      <PlaylistWindow drag dragMomentum={false} initial={{ x: 690, y: 510 }}>
         <ModalHeader>
           <Dot onClick={() => setOpenWindows(prev => ({ ...prev, aboutPlaylist: false }))} />
           <Dot />
@@ -50,7 +50,7 @@ export default function DesktopModal({ openWindows, setOpenWindows }: DesktopMod
     )}
 
     {openWindows.aboutIcon && (
-      <IconWindow drag dragMomentum={false} initial={{ x: 590, y: -450 }}>
+      <IconWindow drag dragMomentum={false} initial={{ x: 700, y: 50 }}>
         <ModalHeader>
           <Dot onClick={() => setOpenWindows(prev => ({ ...prev, aboutIcon: false }))} />
           <Dot />
@@ -64,7 +64,7 @@ export default function DesktopModal({ openWindows, setOpenWindows }: DesktopMod
     )}
 
     {openWindows.aboutGuts && (
-      <GutsWindow drag dragMomentum={false} initial={{ x: -10, y: -420 }}>
+      <GutsWindow drag dragMomentum={false} initial={{ x: 100, y: 50 }}>
         <ModalHeader>
           <Dot onClick={() => setOpenWindows(prev => ({ ...prev, aboutGuts: false }))} />
           <Dot />

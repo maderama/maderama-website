@@ -35,7 +35,9 @@ function Toasts() {
 
     // Clear these toasts when leaving the main page so they don't persist
     // across routes (they have duration: Infinity and the Toaster is global).
-    return () => toast.dismiss();
+    return () => {
+      toast.dismiss();
+    };
   }, []);
 
   return null;

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { styled } from "styled-components";
 
 export const DockContainer = styled.div`
+  /* fixed to the viewport at full size — lives outside the scaled stage */
   position: fixed;
   bottom: 2rem;
   left: 50%;

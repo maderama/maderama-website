@@ -1,11 +1,6 @@
 import { ModalHeader, Dot, ModalTitle } from "./DesktopModal.styles";
-import {
-  NotesWindow,
-  NotesBody,
-  NotesCookieName,
-  NotesSection,
-  NotesText,
-} from "./NotesModal.styles";
+import { NotesWindow, NotesBody } from "./NotesModal.styles";
+import NotesContent from "./NotesContent";
 import type { Cookie } from "../CookieCard/CookieCard";
 
 type NotesModalProps = {
@@ -23,15 +18,7 @@ export default function NotesModal({ cookie, onClose }: NotesModalProps) {
         <ModalTitle>notes</ModalTitle>
       </ModalHeader>
       <NotesBody>
-        <NotesCookieName>{cookie.name} {cookie.emoji}</NotesCookieName>
-        <NotesSection>
-          <NotesText>ingredients:</NotesText>
-          <NotesText>- (add your recipe here)</NotesText>
-        </NotesSection>
-        <NotesSection>
-          <NotesText>notes:</NotesText>
-          <NotesText>- (your little story about this one)</NotesText>
-        </NotesSection>
+        <NotesContent cookie={cookie} />
       </NotesBody>
     </NotesWindow>
   );

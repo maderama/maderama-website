@@ -10,11 +10,14 @@ import DesktopFolders from "./components/Folders/DesktopFolders";
 import DesktopModal from "./components/Modal/DesktopModal";
 import FinderModal from "./components/Modal/FinderModal";
 import SparkleCursor from "./components/SparkleCursor/SparkleCursor";
+import { CentreTitle } from "./components/Folders/HomeLayout.styles";
+import CookiesPage from "./pages/CookiesPage";
+import MobileHome from "./pages/mobile/MobileHome";
+import { useIsTouch } from "./hooks/useMediaQuery";
 import { useState } from "react";
 import { OpenWindowsState } from "./types/OpenWindows";
-import CookiesPage from "./pages/CookiesPage";
 
-function DesktopPage() {
+function DesktopHome() {
   const navigate = useNavigate();
   const [finderOpen, setFinderOpen] = useState(false);
   const [openWindows, setOpenWindows] = useState<OpenWindowsState>({
@@ -28,13 +31,18 @@ function DesktopPage() {
       <GlobalStyles />
       <SparkleCursor colors={["#ffd700", "#ffffff", "#fff4b8"]} />
       <MessageToasts />
-      <StickyNoteContainer id="desktop-container">
-        <StickyNote />
-      </StickyNoteContainer>
-      <TextContainer>
-        <h1>welcome to my</h1>
-        <ThiccText text="portfolio." />
-      </TextContainer>
+      <div style={{ position: "absolute", left: 60, top: 60 }}>
+        <StickyNoteContainer id="desktop-container">
+          <StickyNote />
+        </StickyNoteContainer>
+      </div>
+      <CentreTitle>
+        <TextContainer>
+          <h1>welcome to my</h1>
+          <ThiccText text="portfolio." />
+        </TextContainer>
+      </CentreTitle>
+
       <DesktopFolders
         setOpenWindows={setOpenWindows}
         onOpenHobbies={() => setFinderOpen(true)}
@@ -52,9 +60,10 @@ function DesktopPage() {
 }
 
 function App() {
+  const isTouch = useIsTouch();
   return (
     <Routes>
-      <Route path="/" element={<DesktopPage />} />
+      <Route path="/" element={isTouch ? <MobileHome /> : <DesktopHome />} />
       <Route path="/cookies" element={<CookiesPage />} />
     </Routes>
   );

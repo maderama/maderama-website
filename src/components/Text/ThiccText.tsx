@@ -13,6 +13,7 @@ const Letter = styled(motion.span)`
   font-family: 'Source Serif 4', serif;
   font-style: italic;
   cursor: default;
+  pointer-events: auto; /* re-enable hover when inside the CentreTitle wrapper */
 `;
 
 type ThiccTextProps = {

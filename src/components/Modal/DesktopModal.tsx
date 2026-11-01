@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import aboutText from "./AboutText";
 import { ReadMeWindow, ModalHeader, Dot, ModalContent, PlaylistWindow, ModalTitle, StyledPre, IconWindow, StyledIcon, IconContent, GutsWindow } from "./DesktopModal.styles";
 
@@ -14,10 +15,13 @@ type DesktopModalProps = {
 };
 
 export default function DesktopModal({ openWindows, setOpenWindows }: DesktopModalProps) {
+  const viewportRef = useRef<HTMLDivElement>(null);
+
   return (
     <>
+    <div ref={viewportRef} style={{ position: "fixed", inset: 0, pointerEvents: "none" }} />
     {openWindows.aboutReadMe && (
-      <ReadMeWindow drag dragMomentum={false} initial={{ x: 260, y: 210 }}>
+      <ReadMeWindow drag dragMomentum={false} dragElastic={0} dragConstraints={viewportRef} initial={{ x: 260, y: 210 }}>
         <ModalHeader>
           <Dot onClick={() => setOpenWindows(prev => ({ ...prev, aboutReadMe: false }))} />
           <Dot />
@@ -31,7 +35,7 @@ export default function DesktopModal({ openWindows, setOpenWindows }: DesktopMod
     )}
 
     {openWindows.aboutPlaylist && (
-      <PlaylistWindow drag dragMomentum={false} initial={{ x: 690, y: 510 }}>
+      <PlaylistWindow drag dragMomentum={false} dragElastic={0} dragConstraints={viewportRef} initial={{ x: 690, y: 510 }}>
         <ModalHeader>
           <Dot onClick={() => setOpenWindows(prev => ({ ...prev, aboutPlaylist: false }))} />
           <Dot />
@@ -50,7 +54,7 @@ export default function DesktopModal({ openWindows, setOpenWindows }: DesktopMod
     )}
 
     {openWindows.aboutIcon && (
-      <IconWindow drag dragMomentum={false} initial={{ x: 700, y: 50 }}>
+      <IconWindow drag dragMomentum={false} dragElastic={0} dragConstraints={viewportRef} initial={{ x: 700, y: 50 }}>
         <ModalHeader>
           <Dot onClick={() => setOpenWindows(prev => ({ ...prev, aboutIcon: false }))} />
           <Dot />
@@ -64,7 +68,7 @@ export default function DesktopModal({ openWindows, setOpenWindows }: DesktopMod
     )}
 
     {openWindows.aboutGuts && (
-      <GutsWindow drag dragMomentum={false} initial={{ x: 100, y: 50 }}>
+      <GutsWindow drag dragMomentum={false} dragElastic={0} dragConstraints={viewportRef} initial={{ x: 100, y: 50 }}>
         <ModalHeader>
           <Dot onClick={() => setOpenWindows(prev => ({ ...prev, aboutGuts: false }))} />
           <Dot />

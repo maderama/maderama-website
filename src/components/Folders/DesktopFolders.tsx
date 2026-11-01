@@ -22,7 +22,7 @@ const folders: Folder[] = [
   { name: "hobbies", icon: "/icons/folder.png", id: "hobbies", dx: 160, dy: -210 },
   { name: "project 1", icon: "/icons/folder.png", dx: 410, dy: -150 },
   { name: "thesis", icon: "/icons/folder.png", dx: 450, dy: 40 },
-  { name: "don't look", icon: "/icons/bin.png", dx: 370, dy: 200 },
+  { name: "don't look", icon: "/icons/bin.png", dx: 370, dy: 200, onClick: () => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank") },
   {
     name: "resume.pdf",
     icon: "/icons/pdf_document.png",

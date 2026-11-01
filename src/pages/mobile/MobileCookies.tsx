@@ -31,7 +31,7 @@ export default function MobileCookies() {
         <HomeLink onClick={() => navigate("/")} aria-label="Home">
           ←
         </HomeLink>
-        <h1>christmas cookies 🎄</h1>
+        <h1>christmas cookies</h1>
       </CookiesHeader>
 
       <CarouselArea>

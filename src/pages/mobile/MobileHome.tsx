@@ -36,7 +36,7 @@ export default function MobileHome() {
   return (
     <MobileScreen>
       <MobileHeader>
-        <h1>madison ✨</h1>
+        <h1>Madison Beare</h1>
         <p>welcome to my portfolio</p>
       </MobileHeader>
 

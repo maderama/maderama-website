@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import aboutText from "./AboutText";
+import aboutText, { aboutPhotos, playlistEmbedUrl } from "./AboutText";
 import { ReadMeWindow, ModalHeader, Dot, ModalContent, PlaylistWindow, ModalTitle, StyledPre, IconWindow, StyledIcon, IconContent, GutsWindow } from "./DesktopModal.styles";
 
 type OpenWindowsState = {
@@ -44,7 +44,7 @@ export default function DesktopModal({ openWindows, setOpenWindows }: DesktopMod
         </ModalHeader>
           <iframe
             style={{ borderRadius: 0 }}
-            src="https://open.spotify.com/embed/track/2lljt2vIqFChSGcEn319iU?utm_source=generator"
+            src={playlistEmbedUrl}
             width="100%"
             height="80%"
             frameBorder="0"
@@ -62,7 +62,7 @@ export default function DesktopModal({ openWindows, setOpenWindows }: DesktopMod
         <ModalTitle>me.jpeg</ModalTitle>
         </ModalHeader>
         <IconContent>
-          <StyledIcon src="/images/icon_ic.jpeg" alt="A photo of me" width="100%" height="110%" StyledIcon/>
+          <StyledIcon src={aboutPhotos.icon} alt="A photo of me" width="100%" height="110%" StyledIcon/>
         </IconContent>
       </IconWindow>
     )}
@@ -76,7 +76,7 @@ export default function DesktopModal({ openWindows, setOpenWindows }: DesktopMod
         <ModalTitle>guts.jpeg</ModalTitle>
         </ModalHeader>
         <IconContent>
-          <StyledIcon src="/images/guts.jpeg" alt="A photo of me" width="100%" height="110%" StyledIcon/>
+          <StyledIcon src={aboutPhotos.guts} alt="A photo of me" width="100%" height="110%" StyledIcon/>
         </IconContent>
       </GutsWindow>
     )}

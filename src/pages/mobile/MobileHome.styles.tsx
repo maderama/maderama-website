@@ -1,13 +1,12 @@
 import styled from "styled-components";
+import { gridBackground } from "../../__styles__/GlobalStyles";
 
 export const MobileScreen = styled.div`
   position: fixed;
   inset: 0;
   overflow-y: auto;
-  background: #f8f8f8;
-  background-size: 30px 30px;
-  background-image: linear-gradient(to right, #dddddd 1px, transparent 1px),
-    linear-gradient(to bottom, #dddddd 1px, transparent 1px);
+  /* Opaque fixed layer, so it paints the shared dotted grid itself. */
+  ${gridBackground}
 `;
 
 export const MobileHeader = styled.header`

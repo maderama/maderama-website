@@ -57,10 +57,6 @@ export const apps: AppItem[] = [
     id: "bin",
     label: "don't look",
     icon: "/icons/bin.png",
-    action: {
-      type: "sheet",
-      title: "don't look",
-      body: "I told you not to look 👀",
-    },
+    action: { type: "url", href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
   },
 ];

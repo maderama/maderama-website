@@ -12,7 +12,13 @@ export const SheetBackdrop = styled(motion.div)`
 
 export const SheetPanel = styled(motion.div)`
   width: 100%;
+  /* dvh tracks the real viewport as the mobile URL bar shows/hides, so the
+     header + close button never get pushed above the top of the screen.
+     vh is kept as a fallback for browsers without dvh support. */
   height: 92vh;
+  height: 92dvh;
+  max-height: 92dvh;
+  padding-top: env(safe-area-inset-top);
   background: #ffffff;
   border-radius: 20px 20px 0 0;
   box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.25);

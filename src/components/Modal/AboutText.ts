@@ -9,4 +9,12 @@ Outside of work, I’m probably baking, lying to myself about enjoying running, 
 I strive to make things better to the best of my ability. Whether that be code, processes, or team culture. 
 `;
 
+export const aboutPhotos = {
+  icon: "/images/icon_ic.jpeg",
+  guts: "/images/guts.jpeg",
+} as const;
+
+export const playlistEmbedUrl =
+  "https://open.spotify.com/embed/track/2lljt2vIqFChSGcEn319iU?utm_source=generator";
+
 export default aboutText;

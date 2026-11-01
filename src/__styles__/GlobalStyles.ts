@@ -1,4 +1,14 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
+
+// Shared dotted-grid background, used by the global body and the mobile screen
+// (which is an opaque fixed layer, so it must paint the grid itself).
+export const gridBackground = css`
+  background-color: #f8f8f8;
+  background-size: 30px 30px;
+  background-image:
+    linear-gradient(to right, #dddddd 1px, transparent 1px),
+    linear-gradient(to bottom, #dddddd 1px, transparent 1px);
+`;
 
 export const GlobalStyles = createGlobalStyle`
   :root {
@@ -28,10 +38,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background-size: 30px 30px;
-    background-image:
-        linear-gradient(to right, #dddddd 1px, transparent 1px),
-        linear-gradient(to bottom, #dddddd 1px, transparent 1px);
+    ${gridBackground}
   }
 
   #root {

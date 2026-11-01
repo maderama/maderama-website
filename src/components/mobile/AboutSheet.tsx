@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import aboutText from "../Modal/AboutText";
+import aboutText, { aboutPhotos, playlistEmbedUrl } from "../Modal/AboutText";
 import MobileSheet from "./MobileSheet";
 
 const Photo = styled.img`
@@ -29,11 +29,11 @@ const Playlist = styled.iframe`
 export default function AboutSheet({ onClose }: { onClose: () => void }) {
   return (
     <MobileSheet title="about me" onClose={onClose}>
-      <Photo src="/images/icon_ic.jpeg" alt="A photo of me" />
+      <Photo src={aboutPhotos.icon} alt="A photo of me" />
       <AboutPre>{aboutText}</AboutPre>
-      <Photo src="/images/guts.jpeg" alt="More of me" />
+      <Photo src={aboutPhotos.guts} alt="More of me" />
       <Playlist
-        src="https://open.spotify.com/embed/track/2lljt2vIqFChSGcEn319iU?utm_source=generator"
+        src={playlistEmbedUrl}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       />
     </MobileSheet>
